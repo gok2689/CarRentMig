@@ -49,6 +49,7 @@
     <Compile Include="Branch.cs" />
     <Compile Include="Brand.cs" />
     <Compile Include="CRMUIHints.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
