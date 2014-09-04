@@ -20,6 +20,7 @@ namespace CRMDomain
         public int BranchId { get; set; }
         [Display(Name = "Günlük kiralama bedeli")]
         public decimal PricePerDay { get; set; }
+        public bool IsReserved { get; set; }
 
     }
 }
