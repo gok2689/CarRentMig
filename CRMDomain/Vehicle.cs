@@ -9,6 +9,7 @@ namespace CRMDomain
 {
     public class Vehicle : TableEntity, ITableEntity
     {
+        UIHint()
         [Display(Name = "Plaka")]
         public string Plate { get; set; }
         [Display(Name = "Marka")]
@@ -20,7 +21,7 @@ namespace CRMDomain
         public int BranchId { get; set; }
         [Display(Name = "Günlük kiralama bedeli")]
         public decimal PricePerDay { get; set; }
-        public bool IsReserved { get; set; }
+        public VehicleStatus Status { get; set; }
 
     }
 }
