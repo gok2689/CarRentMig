@@ -9,16 +9,20 @@ namespace CRMDomain
 {
     public class Event : TableEntity, ITableEntity
     {
+        [Display(Name="Kullanıcı")]
+        [UIHint(CRMUIHints.DropDownList)]
         public int MemberId { get; set; }
+        
+        [Display(Name="Araç")]
+        [UIHint(CRMUIHints.DropDownList)]
         public int VehicleId { get; set; }
-
+        
+        [UIHint(CRMUIHints.DateTime)]
         [Display(Name = "Başlangıç tarihi")]
-        [DataType(DataType.DateTime)]
         public System.DateTime StartDate { get; set; }
 
         [Display(Name = "Bitiş Tarihi")]
-        [DataType(DataType.DateTime)]
-
+        [UIHint(CRMUIHints.DateTime)]
         public System.DateTime EndDate { get; set; }
     }
 }

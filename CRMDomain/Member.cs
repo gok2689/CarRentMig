@@ -10,12 +10,18 @@ namespace CRMDomain
     public class Member : TableEntity, ITableEntity
     {
         [Display(Name = "Ad Soyad")]
+        [Required(ErrorMessage="Lütfen bir Ad Soyad giriniz")]
+        [UIHint(CRMUIHints.Comment)]
         public string NameSurName { get; set; }
         [Required(ErrorMessage = "Lütfen bir şifre giriniz")]
+        [Display(Name="Şifre")]
+        [UIHint(CRMUIHints.Password)]
         public string Password { get; set; }
         [Required(ErrorMessage = "Lütfen bir email giriniz")]
-        [EmailAddress]
+        [UIHint(CRMUIHints.Email)]
         public string Email { get; set; }
-        public int Type { get; set; }
+        [Display(Name="Kullanıcı Tipi")]
+        [UIHint(CRMUIHints.Enum)]
+        public MemeberType Type { get; set; }
     }
 }

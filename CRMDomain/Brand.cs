@@ -8,6 +8,7 @@ namespace CRMDomain
 {
     public class Brand : TableEntity, ITableEntity
     {
+
         public string Name { get; set; }
     }
 }
