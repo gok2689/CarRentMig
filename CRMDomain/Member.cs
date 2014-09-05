@@ -23,5 +23,16 @@ namespace CRMDomain
         [Display(Name="Kullanıcı Tipi")]
         [UIHint(CRMUIHints.Enum)]
         public MemeberType Type { get; set; }
+
+
+
+        //----ForeignKeys--------
+
+        public virtual ICollection<Event>  Events { get; set; }
+
+        public Member()
+        {
+            Events = new HashSet<Event>();
+        }
     }
 }

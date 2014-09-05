@@ -8,5 +8,15 @@ namespace CRMDomain
 {
     public class Branch : TableEntity, ITableEntity
     {
+
+        //----ForeignKeys--------
+
+        public virtual ICollection<Vehicle> Vehicles { get; set; }
+
+        public Branch()
+        {
+            Vehicles = new HashSet<Vehicle>();
+
+        }
     }
 }

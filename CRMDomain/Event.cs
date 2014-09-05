@@ -24,5 +24,14 @@ namespace CRMDomain
         [Display(Name = "Bitiş Tarihi")]
         [UIHint(CRMUIHints.DateTime)]
         public System.DateTime EndDate { get; set; }
+
+
+
+
+        //----ForeignKeys--------
+
+        public virtual Vehicle Vehicle { get; set; }
+        public virtual Member Member { get; set; }
+
     }
 }
