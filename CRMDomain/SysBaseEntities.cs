@@ -39,7 +39,7 @@ namespace CRMDomain
         public int ID { get; set; }
     }
 
-    public class TableEntity:Entity,IEntity,IDefinitionTable,IDeletable,ITableEntity
+    public class TableEntity : Entity, IEntity, IDeletable, ITableEntity
     {
         [UIHint(CRMUIHints.SysUser)]
         public int CreateBy { get; set; }
@@ -55,6 +55,9 @@ namespace CRMDomain
 
         [Display(Name = "Sil")]
         public bool IsDeleted { get; set; }
+
+
+       
     }
     public class DefinitionTableEntity : TableEntity, ITableEntity,IEntity, IDeletable, IDefinitionTable
     {

@@ -46,12 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CRMContext.cs" />
+    <Compile Include="Migrations\201409051402472_V0.01.cs" />
+    <Compile Include="Migrations\201409051402472_V0.01.Designer.cs">
+      <DependentUpon>201409051402472_V0.01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRMDomain\CRMDomain.csproj">
+      <Project>{62a608b8-650e-40de-9fd1-5ac58a35cafd}</Project>
+      <Name>CRMDomain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201409051402472_V0.01.resx">
+      <DependentUpon>201409051402472_V0.01.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
